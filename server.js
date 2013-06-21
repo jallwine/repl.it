@@ -110,6 +110,7 @@ var httpCb = function (req, res) {
   }); 
 };
 
+/*
 var watcher = spawn('cake', ['watch']);
 watcher.stdout.pipe(process.stdout);
 watcher.stderr.pipe(process.stderr);
@@ -120,9 +121,10 @@ watcher.stdout.on('data', function () {
   if (server_started) return;
   clearTimeout(start_timer);
   start_timer = setTimeout(function () {
-    http.createServer(httpCb).listen(port, '0.0.0.0');
-    console.log('repl.it server started at http://localhost:' + port + '/');
     server_started = true;
   }, 3000);
 });
+*/
 
+http.createServer(httpCb).listen(port, '0.0.0.0');
+console.log('repl.it server started at http://localhost:' + port + '/');
