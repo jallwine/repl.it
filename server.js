@@ -6,7 +6,7 @@ var fs = require('fs'),
     url = require('url'),
     spawn = require('child_process').spawn,
     queryString = require('querystring'),
-    port = process.argv[2] || 8888;
+    port = process.argv[2] || process.env.PORT || 8888;
 
 var CONTENT_TYPES = {
   'js': 'application/javascript; charset=utf-8',
